@@ -7,5 +7,5 @@
 module.exports.backToFront = function backToFront(str, symbolsCount) {
   if (symbolsCount<=str.length)
   return str.slice(-symbolsCount)+str+str.slice(-symbolsCount);
-  else return str;
+  return str;
 };
