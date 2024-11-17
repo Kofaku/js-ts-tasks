@@ -4,5 +4,10 @@
  * @returns {Object}
  */
 module.exports.hundredAfterOdd = function hundredAfterOdd(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]%2===1){
+      arr.splice(i,0,100)
+    }
+  }
+  return arr;
 };
