@@ -9,5 +9,8 @@
  * @returns {function}
  */
 module.exports.sort = function sort(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  // eslint-disable-next-line func-names
+  return function(...args) {
+    return args.sort(TestUtils.sortComparator);
+  };
 };

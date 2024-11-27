@@ -23,5 +23,16 @@
  * @returns {function}
  */
 module.exports.payments = function payments(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  // eslint-disable-next-line func-names
+  return function(income, debts) {
+
+    function sumAllObjectProperties(obj) {
+      return Object.values(obj).reduce((sum, value) => sum + (typeof value === 'number' ? value : 0), 0);
+    }
+
+    const incomeSum = sumAllObjectProperties(income);  
+    const debtsSum = sumAllObjectProperties(debts);   
+
+    return incomeSum - debtsSum;
+  };
 };

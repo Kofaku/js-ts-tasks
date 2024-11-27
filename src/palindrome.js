@@ -13,5 +13,23 @@
  * @returns {function}
  */
 module.exports.palindrome = function palindrome(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  // eslint-disable-next-line func-names
+  return function(str) {
+    const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+    function poli(text) {
+      let i = 0;
+      let j = text.length - 1;  
+      while (i < j) {
+        if (text[i] !== text[j]) {
+          return false; 
+        }
+        // eslint-disable-next-line no-plusplus
+        i++;
+        // eslint-disable-next-line no-plusplus
+        j--;
+      }
+      return true;
+    }
+    return poli(cleanedStr);
+  };
 };
