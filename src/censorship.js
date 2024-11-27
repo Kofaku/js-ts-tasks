@@ -14,5 +14,15 @@
  * @returns {function}
  */
 module.exports.censorship = function censorship(forbidden) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  // eslint-disable-next-line func-names
+  return function (str) {
+    for (let i = 0; i < forbidden.length; i++) { 
+        const word = forbidden[i];              
+        const regex = new RegExp(word, 'gi');   
+        // eslint-disable-next-line no-param-reassign
+        str = str.replace(regex, '*'.repeat(word.length));
+    }
+    return str; // Возвращаем измененную строку
 };
+};
+
