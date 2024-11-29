@@ -22,7 +22,7 @@ module.exports.censorship = function censorship(forbidden) {
         // eslint-disable-next-line no-param-reassign
         str = str.replace(regex, '*'.repeat(word.length));
     }
-    return str; // Возвращаем измененную строку
+    return str; 
 };
 };
 
