@@ -26,12 +26,9 @@ module.exports.payments = function payments(TestUtils) {
   // eslint-disable-next-line func-names
   return function(income, debts) {
 
-    function sumAllObjectProperties(obj) {
-      return Object.values(obj).reduce((sum, value) => sum + (typeof value === 'number' ? value : 0), 0);
-    }
 
-    const incomeSum = sumAllObjectProperties(income);  
-    const debtsSum = sumAllObjectProperties(debts);   
+    const incomeSum = TestUtils.sumAllObjectProperties.call(income);  
+    const debtsSum = TestUtils.sumAllObjectProperties.call(debts);   
 
     return incomeSum - debtsSum;
   };
