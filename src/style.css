@@ -1,5 +1,148 @@
-/* your css code here  */
-
 body {
   background: linear-gradient(45deg, #FFD6C3, #FCB5FF, #BEC6FF);
+}
+
+.username {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 333px;
+    height: auto; 
+    margin: 50px 5px 5px;
+}
+
+.wrapper {
+  display: flex; 
+  align-items: center; 
+  gap: 0px 30px; 
+  max-width: 600px;
+  margin: 10px 7px 0; 
+}
+.wrapper2 { 
+  align-items: center; 
+  gap: 0px 30px; 
+  max-width: 600px;
+  margin: 10px 7px 0; 
+}
+.wrapper3 {
+  display: flex; 
+  align-items: center; 
+  gap: 0px 7px; 
+  max-width: 600px;
+  margin: 30px 7px 0; 
+}
+.wrapper4 {
+  display: flex; 
+  align-items: center; 
+  gap: 0 8px; 
+  max-width: 600px;
+  margin: 20px 7px 0; 
+}
+.wrapper5 {
+  display: flex; 
+  align-items: center;  
+  max-width: 600px;
+  margin: -10px 7px 0; 
+}
+.wrapper6 {
+  position: relative;
+  display: flex; 
+  align-items: center;  
+  margin:-50px 0 ;
+  padding: 5px 0 40px; 
+  background-color: #121212;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  z-index: 3;
+}
+.image-container {
+  max-width: 40%; 
+}
+
+.avatar {
+  width: 90%; 
+  height: auto;
+}
+
+.text-container {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  max-width: 50%; 
+}
+
+
+.text-container p {
+  margin: 0px; 
+  font-size: 18px; 
+  line-height: 1.5; 
+  font-family: 'Inter', sans-serif;
+  color: white;
+  text-align: center; 
+}
+
+.btn_flw{
+  color: white;
+  background-color: #4192EF;
+  border-radius: 5.73px;
+  outline: none;
+  width: 30%;
+  border: 0;
+  height: 30px;
+}
+
+.btn_me{
+  color: white;
+  background-color: #000000;
+  border-radius: 5.73px;
+  width: 30%;
+  border: 2px solid #343434;
+  height: 30px;
+}
+
+.btn{
+  width: 10%;
+  height: 30px;
+  background-color: #000000;
+  border-radius: 5.73px;
+  border: 2px solid #343434;
+}
+
+.hlight{
+  border: 3px solid #343434;
+  border-radius: 100%;
+  padding: 2px;
+  width: 65px;
+  height: auto;
+}
+
+.Highlight{
+  margin: 0px; 
+  font-size: 18px; 
+  line-height: 1.5; 
+  font-family: 'Inter', sans-serif;
+  color: white;
+  text-align: center; 
+}
+
+.icon{
+  flex: 1;               
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+
+.svg-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 1px; 
+  z-index: 1;
+  border-bottom-left-radius: 50px;
+}
+
+.svg-item {
+  flex: 1;
+  text-align: center;
 }
