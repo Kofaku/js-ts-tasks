@@ -4,18 +4,14 @@
  * @returns {number}
  */
 module.exports.getDaysToNewYear = function getDaysToNewYear(targetDate: Date | string): number {
-  const date = typeof targetDate === 'string' ? new Date(targetDate) : targetDate;
+  const date = typeof targetDate === 'string' ? new Date(targetDate.split('.').reverse().join('-')) : targetDate;
 
   if (isNaN(date.getTime())) {
     throw new Error('Invalid date');
   }
 
-  const currentYear = date.getFullYear();
-
-  const nextNewYear = new Date(currentYear + 1, 0, 1);
-
+  const nextNewYear = new Date(2024, 0, 1);
   const timeDifference = nextNewYear.getTime() - date.getTime();
-
   const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
 
   return daysDifference;
