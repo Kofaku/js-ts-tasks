@@ -6,5 +6,17 @@
  * @returns {boolean}
  */
 module.exports.pangram = function (word: string | number): boolean {
-  throw new Error('Not implemented'); // delete this line and write your code
+   const str = String(word).toLowerCase();
+
+   if (typeof word === 'string') {
+     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+     return alphabet.split('').every((char) => str.includes(char));
+   }
+ 
+   if (typeof word === 'number') {
+     const digits = '0123456789';
+     return digits.split('').every((digit) => str.includes(digit));
+   }
+
+   return false;
 };
